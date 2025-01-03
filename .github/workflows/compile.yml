@@ -20,4 +20,4 @@ jobs:
 
       - name: Test installation
         run: |
-          tectonic --version
+          ./tectonic --version
