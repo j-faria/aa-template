@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Compile LaTeX
 
 on:
@@ -11,14 +9,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - uses: actions/checkout@v4
+        - uses: actions/checkout@v4
 
-      - name: Install tectonic
-        run: |
-          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net |sh
-          ./tectonic --version
+        - name: Install tectonic
+          run: |
+            curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net |sh
+            ./tectonic --version
 
-      - name: Compile LaTeX
-        run: |
-          ./tectonic aa-demo.tex
+        - name: Compile LaTeX
+          run: |
+            ./tectonic aa-paper.tex
+
+        - name: Upload resulting PDF
+          uses: EndBug/add-and-commit@v9
+          with:
+            add: '[ "aa-paper.pdf" ]'
+            pull: '--rebase --autostash'
