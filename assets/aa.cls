@@ -1653,7 +1653,7 @@
   #2\ \ignorespaces%
 }
 % Numbering lines in PDF for all options author's versions
-\RequirePackage[modulo,mathlines,switch,running,columnwise,pagewise]{linenoaa}
+\RequirePackage[modulo,mathlines,switch,running,columnwise,pagewise]{assets/linenoaa}
 \columnwiselinenumbersfalse%
 \runningpagewiselinenumbers%
 %
@@ -2010,8 +2010,8 @@
 % {}{\RequirePackage[colorlinks=true,
 %    linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue]{hyperref}}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Macro ORCID %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\long\def\orcid#1{\unskip\protect\href{https://orcid.org/#1}{\protect\includegraphics[width=8pt,clip]{logo_orcid}}}%
-\long\def\orcidlink#1{\unskip\protect\href{https://orcid.org/#1}{\protect\includegraphics[width=8pt,clip]{logo_orcid}}}
+\long\def\orcid#1{\unskip\protect\href{https://orcid.org/#1}{\protect\includegraphics[width=8pt,clip]{assets/logo_orcid}}}%
+\long\def\orcidlink#1{\unskip\protect\href{https://orcid.org/#1}{\protect\includegraphics[width=8pt,clip]{assets/logo_orcid}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 }
 \setlength\leftmargini  {\parindent}
